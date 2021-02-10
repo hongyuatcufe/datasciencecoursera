@@ -11,7 +11,7 @@ rankhospital <- function(state, outcome, num = "best") {
   selected_data <- data[,c(1,2,which(name==outcome))]
   selected_data[,3]<-suppressWarnings(as.numeric(selected_data[,3]))
   selected_data=selected_data[selected_data$State==state & !is.na(selected_data[,3]),]
-  ordered_data=selected_data[order(selected_data[,3]),]
+  ordered_data=selected_data[order(selected_data[,3],selected_data[,1]),]
   if (num=='best'){
     num=1
   } else if (num=='worst'){
