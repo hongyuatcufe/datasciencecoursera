@@ -1,0 +1,28 @@
+---
+title: "run_analysis.Rmd"
+author: "hongyuatcufe"
+date: "2021年5月8日"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Download and unzip the data
+
+### Download dataset
+
+```{r}
+download.file('https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip',destfile = 'dataset.zip',method = 'curl')
+```
+
+### unzip dataset
+
+```{r}
+unzip('dataset.zip',list=T)
+
+```
+
+
+## Including Plots
