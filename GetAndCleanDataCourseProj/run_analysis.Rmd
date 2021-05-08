@@ -27,4 +27,10 @@ unzip('dataset.zip')
 
 ## Merge dataset
 
+```{r}
+library(data.table)
+test=fread('UCI HAR Dataset/test/X_test.txt')
+train=fread('UCI HAR Dataset/train/X_train.txt')
+
+```
 
