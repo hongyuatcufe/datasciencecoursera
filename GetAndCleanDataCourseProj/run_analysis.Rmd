@@ -82,6 +82,7 @@ new_names=tolower(new_names)
 names(extracted_df)=new_names
 names(extracted_df)
 head(extracted_df,5)
+write.csv(extracted_df,'data.csv')
 ```
 
 ## creates a second, independent tidy data set with the average of each variable for each activity and each subject.
@@ -92,5 +93,6 @@ extracted_mean_df=extracted_df %>%
   summarise_all(function(x) mean(x,na.rm=T))
 
 head(extracted_mean_df,5)
-
+write.csv(extracted_mean_df,'data_mean.csv')
 ```
+
