@@ -80,3 +80,4 @@ extracted_mean_df=extracted_df %>%
 
 head(extracted_mean_df,5)
 write.csv(extracted_mean_df,'data_mean.csv')
+write.table(extracted_mean_df,'data_mean.txt',row.name=FALSE)

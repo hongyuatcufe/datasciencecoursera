@@ -702,7 +702,8 @@ head(extracted_mean_df,5)</code></pre>
 ## #   freq_body_gyro_mag_mean &lt;dbl&gt;, freq_body_gyro_mag_std &lt;dbl&gt;,
 ## #   freq_body_gyro_jerk_mag_mean &lt;dbl&gt;, freq_body_gyro_jerk_mag_std &lt;dbl&gt;,
 ## #   group &lt;dbl&gt;</code></pre>
-<pre class="r"><code>write.csv(extracted_mean_df,&#39;data_mean.csv&#39;)</code></pre>
+<pre class="r"><code>write.csv(extracted_mean_df,&#39;data_mean.csv&#39;)
+write.table(extracted_mean_df,&#39;data_mean.txt&#39;,row.name=FALSE)</code></pre>
 </div>
 
 
