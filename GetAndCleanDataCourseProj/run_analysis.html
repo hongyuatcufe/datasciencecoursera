@@ -400,8 +400,9 @@ testx=fread(&#39;UCI HAR Dataset/test/X_test.txt&#39;)
 trainx=fread(&#39;UCI HAR Dataset/train/X_train.txt&#39;)
 testy=fread(&#39;UCI HAR Dataset/test/y_test.txt&#39;)
 trainy=fread(&#39;UCI HAR Dataset/train/y_train.txt&#39;)
+test_subj=fread(&#39;UCI HAR Dataset/test/subject_test.txt&#39;)
 train_subj=fread(&#39;UCI HAR Dataset/train/subject_train.txt&#39;)
-test=cbind(testx,testy,0)
+test=cbind(testx,testy,test_subj)
 train=cbind(trainx,trainy,train_subj)
 
 varnames=fread(&#39;UCI HAR Dataset/features.txt&#39;)[[2]]
@@ -646,11 +647,11 @@ names(extracted_df)</code></pre>
 ## 4:             -0.9712482                   -0.9855619
 ## 5:             -0.9696193                   -0.9904980
 ##    freq_body_gyro_jerk_mag_std group activity subject
-## 1:                  -0.9073076  test STANDING       0
-## 2:                  -0.9382124  test STANDING       0
-## 3:                  -0.9832727  test STANDING       0
-## 4:                  -0.9858429  test STANDING       0
-## 5:                  -0.9905719  test STANDING       0</code></pre>
+## 1:                  -0.9073076  test STANDING       2
+## 2:                  -0.9382124  test STANDING       2
+## 3:                  -0.9832727  test STANDING       2
+## 4:                  -0.9858429  test STANDING       2
+## 5:                  -0.9905719  test STANDING       2</code></pre>
 <pre class="r"><code>write.csv(extracted_df,&#39;data.csv&#39;)</code></pre>
 </div>
 <div id="creates-a-second-independent-tidy-data-set-with-the-average-of-each-variable-for-each-activity-and-each-subject." class="section level2">
@@ -663,12 +664,12 @@ head(extracted_mean_df,5)</code></pre>
 <pre><code>## # A tibble: 5 x 69
 ## # Groups:   activity [1]
 ##   activity subject time_body_acc_m… time_body_acc_m… time_body_acc_m…
-##   &lt;fct&gt;      &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
-## 1 WALKING        0            0.277          -0.0183           -0.109
-## 2 WALKING        1            0.277          -0.0174           -0.111
+##   &lt;fct&gt;      &lt;int&gt;            &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;
+## 1 WALKING        1            0.277          -0.0174           -0.111
+## 2 WALKING        2            0.276          -0.0186           -0.106
 ## 3 WALKING        3            0.276          -0.0172           -0.113
-## 4 WALKING        5            0.278          -0.0173           -0.108
-## 5 WALKING        6            0.284          -0.0169           -0.110
+## 4 WALKING        4            0.279          -0.0148           -0.111
+## 5 WALKING        5            0.278          -0.0173           -0.108
 ## # … with 64 more variables: time_body_acc_std_x &lt;dbl&gt;,
 ## #   time_body_acc_std_y &lt;dbl&gt;, time_body_acc_std_z &lt;dbl&gt;,
 ## #   time_gravity_acc_mean_x &lt;dbl&gt;, time_gravity_acc_mean_y &lt;dbl&gt;,
@@ -703,7 +704,7 @@ head(extracted_mean_df,5)</code></pre>
 ## #   freq_body_gyro_jerk_mag_mean &lt;dbl&gt;, freq_body_gyro_jerk_mag_std &lt;dbl&gt;,
 ## #   group &lt;dbl&gt;</code></pre>
 <pre class="r"><code>write.csv(extracted_mean_df,&#39;data_mean.csv&#39;)
-write.table(extracted_mean_df,&#39;data_mean.txt&#39;,row.name=FALSE)</code></pre>
+write.table(extracted_mean_df,&#39;final_data.txt&#39;,row.name=FALSE)</code></pre>
 </div>
 
 

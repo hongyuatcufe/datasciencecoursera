@@ -16,10 +16,10 @@ testx=fread('UCI HAR Dataset/test/X_test.txt')
 trainx=fread('UCI HAR Dataset/train/X_train.txt')
 testy=fread('UCI HAR Dataset/test/y_test.txt')
 trainy=fread('UCI HAR Dataset/train/y_train.txt')
+test_subj=fread('UCI HAR Dataset/test/subject_test.txt')
 train_subj=fread('UCI HAR Dataset/train/subject_train.txt')
-### combine test dataset,set the subject to 0
-test=cbind(testx,testy,0)
-### combine train dataset
+### combine test and train dataset seperately
+test=cbind(testx,testy,test_subj)
 train=cbind(trainx,trainy,train_subj)
 
 ### import variable names from features.txt and reaname the datasets
@@ -28,7 +28,7 @@ names(test)=c(varnames,'activity','subject')
 names(train)=c(varnames,'activity','subject')
 test[['group']]='test'
 train[['group']]='train'
-### combine test and train datasets
+### combine test and train datasets into one dataframe
 merged_df=rbind(test,train)
 
 ## Extract the mean and std variables
@@ -80,4 +80,4 @@ extracted_mean_df=extracted_df %>%
 
 head(extracted_mean_df,5)
 write.csv(extracted_mean_df,'data_mean.csv')
-write.table(extracted_mean_df,'data_mean.txt',row.name=FALSE)
+write.table(extracted_mean_df,'final_data.txt',row.name=FALSE)
