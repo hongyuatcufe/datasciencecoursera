@@ -1,0 +1,79 @@
+CODEBOOK
+
+This file illustrate the information of variables included in data.csv
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 'time' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (time_body_acc_xyz and time_gravity_acc_xyz) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (time_body_acc_jerk_xyz and time_body_gyro_jerk_xyz). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (time_body_acc_mag, time_gravity_acc_mag, time_body_acc_jerk_mag, time_body_gyro_mag, time_body_Gyro_jerk_mag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing freq_body_acc_xyz, freq_body_acc_jerk_xyz, freq_body_gyro_xyz, freq_body_acc_jerk_mag, freq_body_gyro_mag, freq_body_gyro_jerk_mag. (Note the 'freq' to indicate frequency domain signals). 
+
+time_body_acc_mean_x:mean of time to obtain acc signals of X axis.
+time_body_acc_mean_y:mean of time to obtain acc signals of Y axis.
+time_body_acc_mean_z:mean of time to obtain acc signals of Z axis.
+time_body_acc_std_x:std of time to obtain acc signals of X axis.
+time_body_acc_std_y:std of time to obtain acc signals of Y axis.
+time_body_acc_std_z:std of time to obtain acc signals of Z axis.
+time_gravity_acc_mean_x:mean of time to obtain gravity acc signals of X axis.
+time_gravity_acc_mean_y:mean of time to obtain gravity acc signals of Y axis.
+time_gravity_acc_mean_z:mean of time to obtain gravity acc signals of Z axis.
+time_gravity_acc_std_x:std of time to obtain gravity acc signals of X axis.
+time_gravity_acc_std_y:std of time to obtain gravity acc signals of Y axis.
+time_gravity_acc_std_z:std of time to obtain gravity acc signals of Z axis.
+time_body_acc_jerk_mean_x:mean of time to obtain acc jerk signals of X axis.
+time_body_acc_jerk_mean_y:mean of time to obtain acc jerk signals of Y axis.
+time_body_acc_jerk_mean_z:mean of time to obtain acc jerk signals of Z axis.
+time_body_acc_jerk_std_x:std of time to obtain acc jerk signals of X axis.
+time_body_acc_jerk_std_y:std of time to obtain acc jerk signals of Y axis.
+time_body_acc_jerk_std_z:std of time to obtain acc jerk signals of Z axis.
+time_body_gyro_mean_x:mean of time to obtain gyro signals of X axis.
+time_body_gyro_mean_y:mean of time to obtain gyro signals of Y axis.
+time_body_gyro_mean_z:mean of time to obtain gyro signals of Z axis.
+time_body_gyro_std_x:std of time to obtain gyro signals of X axis.
+time_body_gyro_std_y:std of time to obtain gyro signals of Y axis.
+time_body_gyro_std_z:std of time to obtain gyro signals of Z axis.：
+time_body_gyro_jerk_mean_x:mean of time to obtain gyro jerk signals of X axis.
+time_body_gyro_jerk_mean_y:mean of time to obtain gyro jerk signals of Y axis.
+time_body_gyro_jerk_mean_z:mean of time to obtain gyro jerk signals of Z axis.
+time_body_gyro_jerk_std_x:std of time to obtain gyro jerk signals of X axis.
+time_body_gyro_jerk_std_y:std of time to obtain gyro jerk signals of Y axis.
+time_body_gyro_jerk_std_z:std of time to obtain gyro jerk signals of Z axis.
+time_body_acc_mag_mean:mean of time to obtain acc mag signals.
+time_body_acc_mag_std:std of time to obtain acc mag signals.
+time_gravity_acc_mag_mean:mean of time to obtain gravity acc mag signals.
+time_gravity_acc_mag_std:std of time to obtain gravity acc mag signals.
+time_body_acc_jerk_mag_mean:mean of time to obtain acc jerk mag signals.
+time_body_acc_jerk_mag_std:std of time to obtain acc jerk mag signals.
+time_body_gyro_mag_mean:mean of time to obtain gyro mag signals.
+time_body_gyro_mag_std:std of time to obtain gyro mag signals.
+time_body_gyro_jerk_mag_mean:mean of time to obtain gyro jerk mag signals.
+time_body_gyro_jerk_mag_std:std of time to obtain gyro jerk mag signals.
+freq_body_acc_mean_x:mean of frequency to obtain acc signals of X axis.
+freq_body_acc_mean_y:mean of frequency to obtain acc signals of Y axis.
+freq_body_acc_mean_z:mean of frequency to obtain acc signals of Z axis.
+freq_body_acc_std_x:std of frequency to obtain acc signals of X axis.
+freq_body_acc_std_y:std of frequency to obtain acc signals of Y axis.
+freq_body_acc_std_z:std of frequency to obtain acc signals of Z axis.
+freq_body_acc_jerk_mean_x:mean of frequency to obtain acc jerk signals of X axis.
+freq_body_acc_jerk_mean_y:mean of frequency to obtain acc jerk signals of Y axis.
+freq_body_acc_jerk_mean_z:mean of frequency to obtain acc jerk signals of Z axis.
+freq_body_acc_jerk_std_x:std of frequency to obtain acc jerk signals of X axis.
+freq_body_acc_jerk_std_y:std of frequency to obtain acc jerk signals of Y axis.
+freq_body_acc_jerk_std_z:std of frequency to obtain acc jerk signals of Z axis.
+freq_body_gyro_mean_x:mean of frequency to obtain gyro signals of X axis.
+freq_body_gyro_mean_y:mean of frequency to obtain gyro signals of Y axis.
+freq_body_gyro_mean_z:mean of frequency to obtain gyro signals of Z axis.
+freq_body_gyro_std_x:std of frequency to obtain gyro signals of X axis.
+freq_body_gyro_std_y:std of frequency to obtain gyro signals of Y axis.
+freq_body_gyro_std_z:std of frequency to obtain gyro signals of Z axis.
+freq_body_acc_mag_mean:mean of frequency to obtain acc mag signals.
+freq_body_acc_mag_std:std of frequency to obtain acc mag signalss.
+freq_body_acc_jerk_mag_mean:mean of frequency to obtain acc jerk mag signals.
+freq_body_acc_jerk_mag_std:std of frequency to obtain acc jerk mag signals.
+freq_body_gyro_mag_mean:mean of frequency to obtain gyro mag signals.
+freq_body_gyro_mag_std:std of frequency to obtain gyro mag signals.
+freq_body_gyro_jerk_mag_mean:mean of frequency to obtain gyro jerk mag signals.
+freq_body_gyro_jerk_mag_std:std of frequency to obtain gyro jerk mag signals.
+group:the group of measurements,'test' from test dataset, 'train' from train dataset.
+activity:,measure the activities, include: WALKING,WALKING_UPSTAIRS,WALKING_DOWNSTAIRS,SITTING,STANDING and LAYING.
+subject:0 for test group,1-30 for train group
+
